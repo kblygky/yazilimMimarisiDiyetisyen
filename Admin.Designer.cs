@@ -35,6 +35,9 @@ namespace yazilimMimarisiDiyetisyen1
             this.txtBoxSifre = new System.Windows.Forms.TextBox();
             this.btnEkle = new System.Windows.Forms.Button();
             this.dataGridViewDiyListesi = new System.Windows.Forms.DataGridView();
+            this.btnCik = new System.Windows.Forms.Button();
+            this.label3 = new System.Windows.Forms.Label();
+            this.txtBoxDSoyadi = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewDiyListesi)).BeginInit();
             this.SuspendLayout();
             // 
@@ -50,7 +53,7 @@ namespace yazilimMimarisiDiyetisyen1
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(114, 134);
+            this.label2.Location = new System.Drawing.Point(114, 147);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(28, 13);
             this.label2.TabIndex = 1;
@@ -58,26 +61,27 @@ namespace yazilimMimarisiDiyetisyen1
             // 
             // txtBoxDadi
             // 
-            this.txtBoxDadi.Location = new System.Drawing.Point(193, 92);
+            this.txtBoxDadi.Location = new System.Drawing.Point(210, 92);
             this.txtBoxDadi.Name = "txtBoxDadi";
             this.txtBoxDadi.Size = new System.Drawing.Size(100, 20);
             this.txtBoxDadi.TabIndex = 2;
             // 
             // txtBoxSifre
             // 
-            this.txtBoxSifre.Location = new System.Drawing.Point(193, 131);
+            this.txtBoxSifre.Location = new System.Drawing.Point(210, 144);
             this.txtBoxSifre.Name = "txtBoxSifre";
             this.txtBoxSifre.Size = new System.Drawing.Size(100, 20);
             this.txtBoxSifre.TabIndex = 3;
             // 
             // btnEkle
             // 
-            this.btnEkle.Location = new System.Drawing.Point(346, 128);
+            this.btnEkle.Location = new System.Drawing.Point(210, 170);
             this.btnEkle.Name = "btnEkle";
             this.btnEkle.Size = new System.Drawing.Size(75, 23);
             this.btnEkle.TabIndex = 4;
             this.btnEkle.Text = "Ekle";
             this.btnEkle.UseVisualStyleBackColor = true;
+            this.btnEkle.Click += new System.EventHandler(this.btnEkle_Click);
             // 
             // dataGridViewDiyListesi
             // 
@@ -87,11 +91,40 @@ namespace yazilimMimarisiDiyetisyen1
             this.dataGridViewDiyListesi.Size = new System.Drawing.Size(568, 150);
             this.dataGridViewDiyListesi.TabIndex = 5;
             // 
+            // btnCik
+            // 
+            this.btnCik.Location = new System.Drawing.Point(672, 25);
+            this.btnCik.Name = "btnCik";
+            this.btnCik.Size = new System.Drawing.Size(75, 23);
+            this.btnCik.TabIndex = 6;
+            this.btnCik.Text = "Çık";
+            this.btnCik.UseVisualStyleBackColor = true;
+            this.btnCik.Click += new System.EventHandler(this.btnCik_Click);
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(114, 121);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(90, 13);
+            this.label3.TabIndex = 7;
+            this.label3.Text = "Diyetisyen Soyadı";
+            // 
+            // txtBoxDSoyadi
+            // 
+            this.txtBoxDSoyadi.Location = new System.Drawing.Point(210, 118);
+            this.txtBoxDSoyadi.Name = "txtBoxDSoyadi";
+            this.txtBoxDSoyadi.Size = new System.Drawing.Size(100, 20);
+            this.txtBoxDSoyadi.TabIndex = 8;
+            // 
             // Admin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.txtBoxDSoyadi);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.btnCik);
             this.Controls.Add(this.dataGridViewDiyListesi);
             this.Controls.Add(this.btnEkle);
             this.Controls.Add(this.txtBoxSifre);
@@ -101,6 +134,7 @@ namespace yazilimMimarisiDiyetisyen1
             this.Name = "Admin";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Admin";
+            this.Load += new System.EventHandler(this.Admin_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewDiyListesi)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -115,5 +149,8 @@ namespace yazilimMimarisiDiyetisyen1
         private System.Windows.Forms.TextBox txtBoxSifre;
         private System.Windows.Forms.Button btnEkle;
         private System.Windows.Forms.DataGridView dataGridViewDiyListesi;
+        private System.Windows.Forms.Button btnCik;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.TextBox txtBoxDSoyadi;
     }
 }
