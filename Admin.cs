@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace yazilimMimarisiDiyetisyen1
 {
-    public partial class Form1 : Form
+    public partial class Admin : Form
     {
-        public Form1()
+        public Admin()
         {
             InitializeComponent();
         }
