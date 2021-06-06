@@ -39,9 +39,10 @@ namespace yazilimMimarisiDiyetisyen1
             this.comboBoxDiyetAdi = new System.Windows.Forms.ComboBox();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
-            this.listBox1 = new System.Windows.Forms.ListBox();
             this.btnGeri = new System.Windows.Forms.Button();
             this.btnEkle = new System.Windows.Forms.Button();
+            this.richTextBox1 = new System.Windows.Forms.RichTextBox();
+            this.label6 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // label1
@@ -135,14 +136,6 @@ namespace yazilimMimarisiDiyetisyen1
             this.label5.TabIndex = 9;
             this.label5.Text = "Diyet Adı ";
             // 
-            // listBox1
-            // 
-            this.listBox1.FormattingEnabled = true;
-            this.listBox1.Location = new System.Drawing.Point(55, 266);
-            this.listBox1.Name = "listBox1";
-            this.listBox1.Size = new System.Drawing.Size(374, 95);
-            this.listBox1.TabIndex = 12;
-            // 
             // btnGeri
             // 
             this.btnGeri.Location = new System.Drawing.Point(398, 24);
@@ -154,21 +147,39 @@ namespace yazilimMimarisiDiyetisyen1
             // 
             // btnEkle
             // 
-            this.btnEkle.Location = new System.Drawing.Point(203, 384);
+            this.btnEkle.Location = new System.Drawing.Point(201, 393);
             this.btnEkle.Name = "btnEkle";
             this.btnEkle.Size = new System.Drawing.Size(92, 23);
             this.btnEkle.TabIndex = 14;
             this.btnEkle.Text = "Ekle";
             this.btnEkle.UseVisualStyleBackColor = true;
             // 
+            // richTextBox1
+            // 
+            this.richTextBox1.Location = new System.Drawing.Point(59, 291);
+            this.richTextBox1.Name = "richTextBox1";
+            this.richTextBox1.Size = new System.Drawing.Size(362, 96);
+            this.richTextBox1.TabIndex = 16;
+            this.richTextBox1.Text = "";
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(58, 259);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(84, 13);
+            this.label6.TabIndex = 17;
+            this.label6.Text = "Diyet Açıklaması";
+            // 
             // HastaBilgileri
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(485, 450);
+            this.Controls.Add(this.label6);
+            this.Controls.Add(this.richTextBox1);
             this.Controls.Add(this.btnEkle);
             this.Controls.Add(this.btnGeri);
-            this.Controls.Add(this.listBox1);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.comboBoxDiyetAdi);
@@ -199,8 +210,9 @@ namespace yazilimMimarisiDiyetisyen1
         private System.Windows.Forms.ComboBox comboBoxDiyetAdi;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.ListBox listBox1;
         private System.Windows.Forms.Button btnGeri;
         private System.Windows.Forms.Button btnEkle;
+        private System.Windows.Forms.RichTextBox richTextBox1;
+        private System.Windows.Forms.Label label6;
     }
 }
