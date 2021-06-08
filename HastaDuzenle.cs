@@ -14,24 +14,74 @@ using yazilimMimarisiDiyetisyen1.veri;
 
 namespace yazilimMimarisiDiyetisyen1
 {
-    public partial class HastaBilgileri : Form
+    public partial class HastaDuzenle : Form
     {
         public string diyetisyenAdi;
-        public HastaBilgileri()
+        public string hastaTc;
+        public HastaDuzenle()
         {
             InitializeComponent();
+        }
+
+        private void HastaDuzenle_Load(object sender, EventArgs e)
+        {
+
+            Diyetisyen diyetisyen = VeriList.veriListeDiyetisyen.diyetisyenler.FirstOrDefault(d => d.Ad == diyetisyenAdi);
+            Hasta hasta = diyetisyen.Hastalar.FirstOrDefault(tc => tc.Tc == hastaTc);
+
+            txtBoxAd.Text = hasta.Ad;
+            txtBoxSoyad.Text = hasta.Soyad;
+            txtBoxKimlikNo.Text = hasta.Tc;
+            comboBoxHastalik.Text = hasta.Hastaligi.HastalikAdi;
+            comboBoxDiyetAdi.Text = hasta.Diyeti.DiyetAdi;
+            richTextBoxDiyetAciklama.Text = hasta.Diyeti.DiyetAciklamasi;
         }
 
         private void btnGeri_Click(object sender, EventArgs e)
         {
             GeriGit();
         }
-       
+        void GeriGit()
+        {
+            DiyetisyenSayfasi diyetisyenSayfasi = new DiyetisyenSayfasi();
+            diyetisyenSayfasi.diyetisyenAdi = diyetisyenAdi;
+            diyetisyenSayfasi.Show();
+            this.Hide();
+        }
 
-        private void btnEkle_Click(object sender, EventArgs e)
+        private void comboBoxDiyetAdi_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (comboBoxDiyetAdi.Text == "Akdeniz")
+            {
+                IDiyet diyet = new Akdeniz();
+                richTextBoxDiyetAciklama.Text = diyet.DiyetAciklamasi;
+            }
+            else if (comboBoxDiyetAdi.Text == "Gluten Free")
+            {
+                IDiyet diyet = new DenizUrunleri();
+                richTextBoxDiyetAciklama.Text = diyet.DiyetAciklamasi;
+            }
+            else if (comboBoxDiyetAdi.Text == "Deniz Ürünleri")
+            {
+                IDiyet diyet = new GlutenFree();
+                richTextBoxDiyetAciklama.Text = diyet.DiyetAciklamasi;
+            }
+            else if (comboBoxDiyetAdi.Text == "Yeşillikler Dünyası")
+            {
+                IDiyet diyet = new YesilliklerDunyasi();
+                richTextBoxDiyetAciklama.Text = diyet.DiyetAciklamasi;
+            }
+            else
+            {
+                MessageBox.Show("boş");
+            }
+        }
+
+        private void btnKaydet_Click(object sender, EventArgs e)
         {
             Diyetisyen diyetisyen = VeriList.veriListeDiyetisyen.diyetisyenler.FirstOrDefault(d => d.Ad == diyetisyenAdi);
-            Hasta hasta = new Hasta();
+            Hasta hasta = diyetisyen.Hastalar.FirstOrDefault(tc => tc.Tc == hastaTc);
+
             hasta.Ad = txtBoxAd.Text;
             hasta.Soyad = txtBoxSoyad.Text;
             hasta.Tc = txtBoxKimlikNo.Text;
@@ -66,7 +116,7 @@ namespace yazilimMimarisiDiyetisyen1
                 MessageBox.Show("boş");
             }
 
-            if (comboBoxHastalik.Text== "Obez")
+            if (comboBoxHastalik.Text == "Obez")
             {
                 IHastalik hastalik = new Obez();
                 hasta.Hastaligi = hastalik;
@@ -85,54 +135,9 @@ namespace yazilimMimarisiDiyetisyen1
             {
                 MessageBox.Show("boş");
             }
-            diyetisyen.Hastalar.Add(hasta);
 
-            MessageBox.Show("Hasta Kaydedildi");
+            MessageBox.Show("Değişiklikler Kaydedildi");
             GeriGit();
-        }
-
-        private void comboBoxHastalik_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void comboBoxDiyetAdi_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            if (comboBoxDiyetAdi.Text=="Akdeniz")
-            {
-                IDiyet diyet = new Akdeniz();
-                richTextBoxDiyetAciklama.Text = diyet.DiyetAciklamasi;
-            }
-            else if (comboBoxDiyetAdi.Text== "Gluten Free")
-            {
-                IDiyet diyet = new DenizUrunleri();
-                richTextBoxDiyetAciklama.Text = diyet.DiyetAciklamasi;
-            }
-            else if (comboBoxDiyetAdi.Text == "Deniz Ürünleri")
-            {
-                IDiyet diyet = new GlutenFree();
-                richTextBoxDiyetAciklama.Text = diyet.DiyetAciklamasi;
-            }
-            else if (comboBoxDiyetAdi.Text == "Yeşillikler Dünyası")
-            {
-                IDiyet diyet = new YesilliklerDunyasi();
-                richTextBoxDiyetAciklama.Text = diyet.DiyetAciklamasi;
-            }
-            else
-            {
-                MessageBox.Show("boş");
-            }
-        }
-        void GeriGit()
-        {
-            DiyetisyenSayfasi diyetisyenSayfasi = new DiyetisyenSayfasi();
-            diyetisyenSayfasi.diyetisyenAdi = diyetisyenAdi;
-            diyetisyenSayfasi.Show();
-            this.Hide();
-        }
-
-        private void HastaBilgileri_Load(object sender, EventArgs e)
-        {
 
         }
     }

@@ -51,6 +51,12 @@
     <Compile Include="Diyetler\DenizUrunleri.cs" />
     <Compile Include="Diyetler\GlutenFree.cs" />
     <Compile Include="Diyetler\YesilliklerDunyasi.cs" />
+    <Compile Include="HastaDuzenle.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="HastaDuzenle.Designer.cs">
+      <DependentUpon>HastaDuzenle.cs</DependentUpon>
+    </Compile>
     <Compile Include="Hastaliklar\Colyak.cs" />
     <Compile Include="Hastaliklar\Obez.cs" />
     <Compile Include="Admin.cs">
@@ -94,6 +100,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="HastaBilgileri.resx">
       <DependentUpon>HastaBilgileri.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HastaDuzenle.resx">
+      <DependentUpon>HastaDuzenle.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

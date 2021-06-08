@@ -41,7 +41,7 @@ namespace yazilimMimarisiDiyetisyen1
             this.label5 = new System.Windows.Forms.Label();
             this.btnGeri = new System.Windows.Forms.Button();
             this.btnEkle = new System.Windows.Forms.Button();
-            this.richTextBox1 = new System.Windows.Forms.RichTextBox();
+            this.richTextBoxDiyetAciklama = new System.Windows.Forms.RichTextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
@@ -98,25 +98,27 @@ namespace yazilimMimarisiDiyetisyen1
             this.comboBoxHastalik.FormattingEnabled = true;
             this.comboBoxHastalik.Items.AddRange(new object[] {
             "Obez",
-            "Çölyak ",
+            "Çölyak",
             "Şeker Hastalığı"});
             this.comboBoxHastalik.Location = new System.Drawing.Point(115, 176);
             this.comboBoxHastalik.Name = "comboBoxHastalik";
             this.comboBoxHastalik.Size = new System.Drawing.Size(121, 21);
             this.comboBoxHastalik.TabIndex = 6;
+            this.comboBoxHastalik.SelectedIndexChanged += new System.EventHandler(this.comboBoxHastalik_SelectedIndexChanged);
             // 
             // comboBoxDiyetAdi
             // 
             this.comboBoxDiyetAdi.FormattingEnabled = true;
             this.comboBoxDiyetAdi.Items.AddRange(new object[] {
             "Akdeniz",
-            "Gluten Free ",
-            "Deniz Ürünleri ",
-            "Yeşillikler Dünyası "});
+            "Gluten Free",
+            "Deniz Ürünleri",
+            "Yeşillikler Dünyası"});
             this.comboBoxDiyetAdi.Location = new System.Drawing.Point(115, 213);
             this.comboBoxDiyetAdi.Name = "comboBoxDiyetAdi";
             this.comboBoxDiyetAdi.Size = new System.Drawing.Size(121, 21);
             this.comboBoxDiyetAdi.TabIndex = 7;
+            this.comboBoxDiyetAdi.SelectedIndexChanged += new System.EventHandler(this.comboBoxDiyetAdi_SelectedIndexChanged);
             // 
             // label4
             // 
@@ -144,6 +146,7 @@ namespace yazilimMimarisiDiyetisyen1
             this.btnGeri.TabIndex = 13;
             this.btnGeri.Text = "Geri";
             this.btnGeri.UseVisualStyleBackColor = true;
+            this.btnGeri.Click += new System.EventHandler(this.btnGeri_Click);
             // 
             // btnEkle
             // 
@@ -153,14 +156,15 @@ namespace yazilimMimarisiDiyetisyen1
             this.btnEkle.TabIndex = 14;
             this.btnEkle.Text = "Ekle";
             this.btnEkle.UseVisualStyleBackColor = true;
+            this.btnEkle.Click += new System.EventHandler(this.btnEkle_Click);
             // 
-            // richTextBox1
+            // richTextBoxDiyetAciklama
             // 
-            this.richTextBox1.Location = new System.Drawing.Point(59, 291);
-            this.richTextBox1.Name = "richTextBox1";
-            this.richTextBox1.Size = new System.Drawing.Size(362, 96);
-            this.richTextBox1.TabIndex = 16;
-            this.richTextBox1.Text = "";
+            this.richTextBoxDiyetAciklama.Location = new System.Drawing.Point(59, 291);
+            this.richTextBoxDiyetAciklama.Name = "richTextBoxDiyetAciklama";
+            this.richTextBoxDiyetAciklama.Size = new System.Drawing.Size(362, 96);
+            this.richTextBoxDiyetAciklama.TabIndex = 16;
+            this.richTextBoxDiyetAciklama.Text = "";
             // 
             // label6
             // 
@@ -177,7 +181,7 @@ namespace yazilimMimarisiDiyetisyen1
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(485, 450);
             this.Controls.Add(this.label6);
-            this.Controls.Add(this.richTextBox1);
+            this.Controls.Add(this.richTextBoxDiyetAciklama);
             this.Controls.Add(this.btnEkle);
             this.Controls.Add(this.btnGeri);
             this.Controls.Add(this.label5);
@@ -193,6 +197,7 @@ namespace yazilimMimarisiDiyetisyen1
             this.Name = "HastaBilgileri";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "HastaBilgileri";
+            this.Load += new System.EventHandler(this.HastaBilgileri_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -212,7 +217,7 @@ namespace yazilimMimarisiDiyetisyen1
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Button btnGeri;
         private System.Windows.Forms.Button btnEkle;
-        private System.Windows.Forms.RichTextBox richTextBox1;
+        private System.Windows.Forms.RichTextBox richTextBoxDiyetAciklama;
         private System.Windows.Forms.Label label6;
     }
 }
