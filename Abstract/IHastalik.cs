@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace yazilimMimarisiDiyetisyen1.Abstract
 {
-    interface IHastalik
+    public interface IHastalik
     {
          string HastalikAdi { get;}
     }

@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace yazilimMimarisiDiyetisyen1.Abstract
 {
-    interface IDiyet
+    public interface IDiyet
     {
         string DiyetAdi { get;  }
         string DiyetAciklamasi { get; set; }

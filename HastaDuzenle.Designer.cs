@@ -43,8 +43,8 @@ namespace yazilimMimarisiDiyetisyen1
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.btnRapor = new System.Windows.Forms.Button();
+            this.comboBoxRapor = new System.Windows.Forms.ComboBox();
             this.SuspendLayout();
             // 
             // label6
@@ -176,33 +176,36 @@ namespace yazilimMimarisiDiyetisyen1
             this.label1.TabIndex = 18;
             this.label1.Text = "Ad";
             // 
-            // button1
+            // btnRapor
             // 
-            this.button1.Location = new System.Drawing.Point(317, 212);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 32);
-            this.button1.TabIndex = 32;
-            this.button1.Text = "Rapor Yaz";
-            this.button1.UseVisualStyleBackColor = true;
+            this.btnRapor.Location = new System.Drawing.Point(317, 212);
+            this.btnRapor.Name = "btnRapor";
+            this.btnRapor.Size = new System.Drawing.Size(75, 32);
+            this.btnRapor.TabIndex = 32;
+            this.btnRapor.Text = "Rapor Yaz";
+            this.btnRapor.UseVisualStyleBackColor = true;
+            this.btnRapor.Click += new System.EventHandler(this.btnRapor_Click);
             // 
-            // comboBox1
+            // comboBoxRapor
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Items.AddRange(new object[] {
+            this.comboBoxRapor.FormattingEnabled = true;
+            this.comboBoxRapor.Items.AddRange(new object[] {
             "JSON",
-            "HTML"});
-            this.comboBox1.Location = new System.Drawing.Point(317, 180);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(75, 21);
-            this.comboBox1.TabIndex = 33;
+            "JSON(ters)",
+            "HTML",
+            "HTML(ters)"});
+            this.comboBoxRapor.Location = new System.Drawing.Point(317, 180);
+            this.comboBoxRapor.Name = "comboBoxRapor";
+            this.comboBoxRapor.Size = new System.Drawing.Size(75, 21);
+            this.comboBoxRapor.TabIndex = 33;
             // 
             // HastaDuzenle
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(405, 457);
-            this.Controls.Add(this.comboBox1);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.comboBoxRapor);
+            this.Controls.Add(this.btnRapor);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.richTextBoxDiyetAciklama);
             this.Controls.Add(this.btnKaydet);
@@ -242,7 +245,7 @@ namespace yazilimMimarisiDiyetisyen1
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.Button btnRapor;
+        private System.Windows.Forms.ComboBox comboBoxRapor;
     }
 }

@@ -7,7 +7,7 @@ using yazilimMimarisiDiyetisyen1.Abstract;
 
 namespace yazilimMimarisiDiyetisyen1.veri
 {
-    class Hasta
+    public class Hasta
     {
         public string Ad { get; set; }
         public string Soyad { get; set; }

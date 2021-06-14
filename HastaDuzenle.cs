@@ -10,6 +10,7 @@ using System.Windows.Forms;
 using yazilimMimarisiDiyetisyen1.Abstract;
 using yazilimMimarisiDiyetisyen1.Diyetler;
 using yazilimMimarisiDiyetisyen1.Hastaliklar;
+using yazilimMimarisiDiyetisyen1.Report;
 using yazilimMimarisiDiyetisyen1.veri;
 
 namespace yazilimMimarisiDiyetisyen1
@@ -116,6 +117,7 @@ namespace yazilimMimarisiDiyetisyen1
                 MessageBox.Show("boş");
             }
 
+
             if (comboBoxHastalik.Text == "Obez")
             {
                 IHastalik hastalik = new Obez();
@@ -140,5 +142,46 @@ namespace yazilimMimarisiDiyetisyen1
             GeriGit();
 
         }
+
+        private void btnRapor_Click(object sender, EventArgs e)
+        {
+            Diyetisyen diyetisyen = VeriList.veriListeDiyetisyen.diyetisyenler.FirstOrDefault(d => d.Ad == diyetisyenAdi);
+            Hasta hasta = diyetisyen.Hastalar.FirstOrDefault(tc => tc.Tc == hastaTc);
+
+            if (comboBoxRapor.Text== "JSON")
+            {
+                ReportBuilderBase builder = new JsonReportBuilder(hasta);
+                ReportManager reportManager = new ReportManager(builder);
+                string rapor = reportManager.Build();
+                MessageBox.Show(rapor);
+            }
+            else if (comboBoxRapor.Text == "HTML")
+            {
+                ReportBuilderBase builder = new HtmlReportBuilder(hasta);
+                ReportManager reportManager = new ReportManager(builder);
+                string rapor = reportManager.Build();
+                MessageBox.Show(rapor);
+            }
+            else if (comboBoxRapor.Text == "JSON(ters)")
+            {
+                ReportBuilderBase builder = new JsonReportBuilder(hasta);
+                ReportManager reportManager = new ReportManager(builder);
+                string rapor = reportManager.BuildReverse();
+                MessageBox.Show(rapor);
+            }
+            else if (comboBoxRapor.Text == "HTML(ters)")
+            {
+                ReportBuilderBase builder = new HtmlReportBuilder(hasta);
+                ReportManager reportManager = new ReportManager(builder);
+                string rapor = reportManager.BuildReverse();
+                MessageBox.Show(rapor);
+            }
+            else
+            {
+                MessageBox.Show("Rapor Formatı seçin");
+            }
+            
+        }
     }
 }
+//(ters)

@@ -28,9 +28,11 @@ namespace yazilimMimarisiDiyetisyen1
             dataGridViewHastaList.DataSource = diyetisyen.Hastalar;
 
             //MessageBox.Show( dataGridViewHastaList.Columns.Count.ToString());
-
-            dataGridViewHastaList.Columns[3].Visible=false;
-            dataGridViewHastaList.Columns[4].Visible = false;
+            if (diyetisyen.Hastalar!=null)
+            {
+                dataGridViewHastaList.Columns[3].Visible = false;
+                dataGridViewHastaList.Columns[4].Visible = false;
+            }
         }
 
         private void btnCik_Click(object sender, EventArgs e)
