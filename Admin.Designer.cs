@@ -44,40 +44,45 @@ namespace yazilimMimarisiDiyetisyen1
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(114, 95);
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.label1.Location = new System.Drawing.Point(28, 72);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(73, 13);
+            this.label1.Size = new System.Drawing.Size(82, 15);
             this.label1.TabIndex = 0;
             this.label1.Text = "Diyetisyen Adı";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(114, 147);
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.label2.Location = new System.Drawing.Point(28, 148);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(28, 13);
+            this.label2.Size = new System.Drawing.Size(32, 15);
             this.label2.TabIndex = 1;
             this.label2.Text = "Şifre";
             // 
             // txtBoxDadi
             // 
-            this.txtBoxDadi.Location = new System.Drawing.Point(210, 92);
+            this.txtBoxDadi.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.txtBoxDadi.Location = new System.Drawing.Point(145, 69);
             this.txtBoxDadi.Name = "txtBoxDadi";
-            this.txtBoxDadi.Size = new System.Drawing.Size(100, 20);
+            this.txtBoxDadi.Size = new System.Drawing.Size(100, 21);
             this.txtBoxDadi.TabIndex = 2;
             // 
             // txtBoxSifre
             // 
-            this.txtBoxSifre.Location = new System.Drawing.Point(210, 144);
+            this.txtBoxSifre.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.txtBoxSifre.Location = new System.Drawing.Point(145, 145);
             this.txtBoxSifre.Name = "txtBoxSifre";
-            this.txtBoxSifre.Size = new System.Drawing.Size(100, 20);
+            this.txtBoxSifre.Size = new System.Drawing.Size(100, 21);
             this.txtBoxSifre.TabIndex = 3;
             // 
             // btnEkle
             // 
-            this.btnEkle.Location = new System.Drawing.Point(210, 170);
+            this.btnEkle.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.btnEkle.Location = new System.Drawing.Point(145, 187);
             this.btnEkle.Name = "btnEkle";
-            this.btnEkle.Size = new System.Drawing.Size(75, 23);
+            this.btnEkle.Size = new System.Drawing.Size(75, 26);
             this.btnEkle.TabIndex = 4;
             this.btnEkle.Text = "Ekle";
             this.btnEkle.UseVisualStyleBackColor = true;
@@ -85,17 +90,19 @@ namespace yazilimMimarisiDiyetisyen1
             // 
             // dataGridViewDiyListesi
             // 
+            this.dataGridViewDiyListesi.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight;
             this.dataGridViewDiyListesi.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridViewDiyListesi.Location = new System.Drawing.Point(117, 225);
+            this.dataGridViewDiyListesi.Location = new System.Drawing.Point(31, 233);
             this.dataGridViewDiyListesi.Name = "dataGridViewDiyListesi";
-            this.dataGridViewDiyListesi.Size = new System.Drawing.Size(568, 150);
+            this.dataGridViewDiyListesi.Size = new System.Drawing.Size(568, 136);
             this.dataGridViewDiyListesi.TabIndex = 5;
             // 
             // btnCik
             // 
-            this.btnCik.Location = new System.Drawing.Point(672, 25);
+            this.btnCik.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.btnCik.Location = new System.Drawing.Point(524, 12);
             this.btnCik.Name = "btnCik";
-            this.btnCik.Size = new System.Drawing.Size(75, 23);
+            this.btnCik.Size = new System.Drawing.Size(75, 26);
             this.btnCik.TabIndex = 6;
             this.btnCik.Text = "Çık";
             this.btnCik.UseVisualStyleBackColor = true;
@@ -104,24 +111,26 @@ namespace yazilimMimarisiDiyetisyen1
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(114, 121);
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.label3.Location = new System.Drawing.Point(28, 110);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(90, 13);
+            this.label3.Size = new System.Drawing.Size(102, 15);
             this.label3.TabIndex = 7;
             this.label3.Text = "Diyetisyen Soyadı";
             // 
             // txtBoxDSoyadi
             // 
-            this.txtBoxDSoyadi.Location = new System.Drawing.Point(210, 118);
+            this.txtBoxDSoyadi.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.txtBoxDSoyadi.Location = new System.Drawing.Point(145, 107);
             this.txtBoxDSoyadi.Name = "txtBoxDSoyadi";
-            this.txtBoxDSoyadi.Size = new System.Drawing.Size(100, 20);
+            this.txtBoxDSoyadi.Size = new System.Drawing.Size(100, 21);
             this.txtBoxDSoyadi.TabIndex = 8;
             // 
             // Admin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(629, 399);
             this.Controls.Add(this.txtBoxDSoyadi);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.btnCik);

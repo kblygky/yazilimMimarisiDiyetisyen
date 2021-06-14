@@ -38,9 +38,10 @@ namespace yazilimMimarisiDiyetisyen1
             // 
             // btnHastaEkle
             // 
-            this.btnHastaEkle.Location = new System.Drawing.Point(242, 89);
+            this.btnHastaEkle.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.btnHastaEkle.Location = new System.Drawing.Point(181, 114);
             this.btnHastaEkle.Name = "btnHastaEkle";
-            this.btnHastaEkle.Size = new System.Drawing.Size(91, 23);
+            this.btnHastaEkle.Size = new System.Drawing.Size(91, 28);
             this.btnHastaEkle.TabIndex = 10;
             this.btnHastaEkle.Text = "Hasta Ekle";
             this.btnHastaEkle.UseVisualStyleBackColor = true;
@@ -48,27 +49,30 @@ namespace yazilimMimarisiDiyetisyen1
             // 
             // dataGridViewHastaList
             // 
+            this.dataGridViewHastaList.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight;
             this.dataGridViewHastaList.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridViewHastaList.Location = new System.Drawing.Point(12, 169);
             this.dataGridViewHastaList.Name = "dataGridViewHastaList";
-            this.dataGridViewHastaList.Size = new System.Drawing.Size(561, 256);
+            this.dataGridViewHastaList.Size = new System.Drawing.Size(412, 256);
             this.dataGridViewHastaList.TabIndex = 9;
             this.dataGridViewHastaList.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewHastaList_CellContentClick);
             // 
             // lblDiyetisyenAdi
             // 
             this.lblDiyetisyenAdi.AutoSize = true;
-            this.lblDiyetisyenAdi.Location = new System.Drawing.Point(272, 42);
+            this.lblDiyetisyenAdi.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.lblDiyetisyenAdi.Location = new System.Drawing.Point(210, 76);
             this.lblDiyetisyenAdi.Name = "lblDiyetisyenAdi";
-            this.lblDiyetisyenAdi.Size = new System.Drawing.Size(35, 13);
+            this.lblDiyetisyenAdi.Size = new System.Drawing.Size(41, 15);
             this.lblDiyetisyenAdi.TabIndex = 11;
             this.lblDiyetisyenAdi.Text = "label1";
             // 
             // btnCik
             // 
-            this.btnCik.Location = new System.Drawing.Point(498, 32);
+            this.btnCik.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.btnCik.Location = new System.Drawing.Point(349, 12);
             this.btnCik.Name = "btnCik";
-            this.btnCik.Size = new System.Drawing.Size(75, 23);
+            this.btnCik.Size = new System.Drawing.Size(75, 27);
             this.btnCik.TabIndex = 12;
             this.btnCik.Text = "Çık";
             this.btnCik.UseVisualStyleBackColor = true;
@@ -78,7 +82,7 @@ namespace yazilimMimarisiDiyetisyen1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(586, 450);
+            this.ClientSize = new System.Drawing.Size(438, 450);
             this.Controls.Add(this.btnCik);
             this.Controls.Add(this.lblDiyetisyenAdi);
             this.Controls.Add(this.btnHastaEkle);

@@ -38,6 +38,7 @@ namespace yazilimMimarisiDiyetisyen1
             // 
             // btnGiris
             // 
+            this.btnGiris.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.btnGiris.Location = new System.Drawing.Point(167, 219);
             this.btnGiris.Name = "btnGiris";
             this.btnGiris.Size = new System.Drawing.Size(75, 23);
@@ -49,40 +50,44 @@ namespace yazilimMimarisiDiyetisyen1
             // label1
             // 
             this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.label1.Location = new System.Drawing.Point(72, 117);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(64, 13);
+            this.label1.Size = new System.Drawing.Size(74, 15);
             this.label1.TabIndex = 1;
             this.label1.Text = "Kullanıcı Adı";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.label2.Location = new System.Drawing.Point(72, 166);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(28, 13);
+            this.label2.Size = new System.Drawing.Size(32, 15);
             this.label2.TabIndex = 2;
             this.label2.Text = "Şifre";
             // 
             // txtBoxKullaniciAdi
             // 
+            this.txtBoxKullaniciAdi.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.txtBoxKullaniciAdi.Location = new System.Drawing.Point(156, 117);
             this.txtBoxKullaniciAdi.Name = "txtBoxKullaniciAdi";
-            this.txtBoxKullaniciAdi.Size = new System.Drawing.Size(100, 20);
+            this.txtBoxKullaniciAdi.Size = new System.Drawing.Size(100, 21);
             this.txtBoxKullaniciAdi.TabIndex = 3;
             // 
             // txtBoxSifre
             // 
+            this.txtBoxSifre.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.txtBoxSifre.Location = new System.Drawing.Point(156, 159);
             this.txtBoxSifre.Name = "txtBoxSifre";
-            this.txtBoxSifre.Size = new System.Drawing.Size(100, 20);
+            this.txtBoxSifre.Size = new System.Drawing.Size(100, 21);
             this.txtBoxSifre.TabIndex = 4;
             // 
             // Giris
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(408, 428);
+            this.ClientSize = new System.Drawing.Size(396, 428);
             this.Controls.Add(this.txtBoxSifre);
             this.Controls.Add(this.txtBoxKullaniciAdi);
             this.Controls.Add(this.label2);
