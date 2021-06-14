@@ -89,7 +89,6 @@
     <Compile Include="Hastaliklar\Seker.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Report\HastaInfo.cs" />
     <Compile Include="Report\HtmlReportBuilder.cs" />
     <Compile Include="Report\JsonReportBuilder.cs" />
     <Compile Include="Report\ReportBuilderBase.cs" />

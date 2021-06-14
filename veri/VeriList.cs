@@ -28,7 +28,7 @@ namespace yazilimMimarisiDiyetisyen1.veri
             }
         }
 
-        public VeriList()
+        private VeriList()//!!!
         {
             diyetisyenler = new List<Diyetisyen>();
 

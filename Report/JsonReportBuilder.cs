@@ -22,11 +22,7 @@ namespace yazilimMimarisiDiyetisyen1.Report
 
         public override string BuildHastaInfo()
         {
-            HastaInfo h = new HastaInfo();
-            h.Adi = Hasta.Ad;
-            h.Soyadi = Hasta.Soyad;
-            h.Tc = Hasta.Tc;
-            return JsonConvert.SerializeObject(h);
+            return JsonConvert.SerializeObject(Hasta);
         }
     }
 }
